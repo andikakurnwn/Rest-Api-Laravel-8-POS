@@ -1,4 +1,6 @@
-# 1. Request Login, method POST :
+# Documentation
+
+## 1. Request Login, method POST :
 
 https://api.kodejalanan.com/api/login
 is request required email and password for login 
@@ -11,7 +13,7 @@ example :
 }
 ```
 
-# 2. Request Register for Customer, method POST : 
+## 2. Request Register for Customer, method POST : 
 
 https://api.kodejalanan.com/api/login
 is request required name, email, password and c_password for register 
@@ -26,7 +28,7 @@ example :
 }
 ```
 
-# 3. Request List Product, Method GET :
+## 3. Request List Product, Method GET :
 
 is request don't required anything for get List Product
 example :
@@ -34,7 +36,7 @@ example :
 https://api.kodejalanan.com/api/product
 ```
 
-# 4. Request Detail of Product, method GET :
+## 4. Request Detail of Product, method GET :
 
 https://api.kodejalanan.com/api/product/{id_product}
 is request required product_id for load data from detail Product
@@ -45,7 +47,7 @@ https://api.kodejalanan.com/api/product/1
 ```
 
 
-# 5. Request List Product by Category, Method GET :
+## 5. Request List Product by Category, Method GET :
 
 https://api.kodejalanan.com/api/category/{slug}
 is request required slug for load data from detail Product
@@ -56,7 +58,7 @@ https://api.kodejalanan.com/api/category/makanan
 ```
 
 
-# 6. Request List Cart of customer, method GET :
+## 6. Request List Cart of customer, method GET :
 
 is request required Authorization token Customer for get List Cart of Customer 
 example :
@@ -66,7 +68,7 @@ https://api.kodejalanan.com/api/customer/cart
 ```
 
 
-# 7. Request Add Product to Cart of Customer, method POST : 
+## 7. Request Add Product to Cart of Customer, method POST : 
 
 https://api.kodejalanan.com/api/customer/cart
 is request required product_id, notes ( nullable ) and kuantitas for Added Product to Cart 
@@ -80,7 +82,7 @@ example :
 }
 ```
 
-# 8. Request Delete Product from Cart of Customer, method DELETE :
+## 8. Request Delete Product from Cart of Customer, method DELETE :
 
 https://api.kodejalanan.com/api/customer/cart/{cart_id}
 is request required cart_id for deleted Product from Cart of Customer
@@ -91,7 +93,7 @@ https://api.kodejalanan.com/api/customer/cart/1
 ```
 
 
-# 9. Request CheckOut, method POST : 
+## 9. Request CheckOut, method POST : 
 
 https://api.kodejalanan.com/api/customer/checkOut
 is request required data of cart for checkOut Product of Customer
@@ -113,7 +115,7 @@ example :
 }
 ```
 
-# 10. Request Transaction, method POST :
+## 10. Request Transaction, method POST :
 
 https://api.kodejalanan.com/api/customer/store
 is request required data of cart for make transaction Product of Customer
