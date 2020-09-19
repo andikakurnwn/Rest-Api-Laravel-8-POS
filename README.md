@@ -1,5 +1,7 @@
 # Documentation
 
+![alt tag](https://github.com/andikakurnwn/Rest-Api-Laravel-8-POS-/blob/master/public/wordpress-laravel-8-home.jpg)
+
 ## 1. Request Login, method POST :
 
 https://api.kodejalanan.com/api/login
