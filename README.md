@@ -28,7 +28,11 @@ example :
 
 # 3. Request List Product, Method GET :
 
+is request don't required anything for get List Product
+example :
+```
 https://api.kodejalanan.com/api/product
+```
 
 # 4. Request Detail of Product, method GET :
 
@@ -36,7 +40,10 @@ https://api.kodejalanan.com/api/product/{id_product}
 is request required product_id for load data from detail Product
 example :
 
+```
 https://api.kodejalanan.com/api/product/1
+```
+
 
 # 5. Request List Product by Category, Method GET :
 
@@ -44,14 +51,20 @@ https://api.kodejalanan.com/api/category/{slug}
 is request required slug for load data from detail Product
 example :
 
+```
 https://api.kodejalanan.com/api/category/makanan
+```
 
 
-# 6. Request Cart of customer, method GET :
+# 6. Request List Cart of customer, method GET :
 
+is request required Authorization token Customer for get List Cart of Customer 
+example :
+
+```
 https://api.kodejalanan.com/api/customer/cart
+```
 
-for the routes your mush authantication login with api token
 
 # 7. Request Add Product to Cart of Customer, method POST : 
 
@@ -73,7 +86,10 @@ https://api.kodejalanan.com/api/customer/cart/{cart_id}
 is request required cart_id for deleted Product from Cart of Customer
 example :
 
+```
 https://api.kodejalanan.com/api/customer/cart/1
+```
+
 
 # 9. Request CheckOut, method POST : 
 
