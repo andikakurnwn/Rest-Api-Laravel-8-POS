@@ -2,6 +2,12 @@
 
 ![alt tag](https://github.com/andikakurnwn/Rest-Api-Laravel-8-POS-/blob/master/public/wordpress-laravel-8-home.jpg)
 
+For request Image using url :
+https://api.kodejalanan.com/storage/{path/name_image}
+example : 
+```
+https://api.kodejalanan.com/storage/product/donat.jpg
+```
 ## 1. Request Login, method POST :
 
 https://api.kodejalanan.com/api/login
@@ -136,8 +142,9 @@ example :
         }
     ],
 
-    "subtota" : "50000"
+    "subtotal" : "50000"
 
 } 
 
 ```
+
