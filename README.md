@@ -86,16 +86,6 @@ example :
 https://api.kodejalanan.com/api/product
 ```
 
-## 4. Request Detail of Product, method GET :
-
-https://api.kodejalanan.com/api/product/{id_product}
-is request required product_id for load data from detail Product
-example :
-
-```
-https://api.kodejalanan.com/api/product/1
-```
-
 Output
 ```json
 {
@@ -190,6 +180,63 @@ Output
             }
         }
     ]
+}
+```
+
+
+## 4. Request Detail of Product, method GET :
+
+https://api.kodejalanan.com/api/product/{id_product}
+is request required product_id for load data from detail Product
+example :
+
+```
+https://api.kodejalanan.com/api/product/1
+```
+
+Output
+```json
+{
+    "status": "Success",
+    "message": "Successfully to load Product :)",
+    "data": {
+        "id": 3,
+        "user_id": 2,
+        "name": "Japanese Ice Coffe",
+        "description": "Japanese Ice Coffe yang kami miliki ini bukanlah Japanese Ice Coffe kaleng-kaleng.. silakan coba kalau kau tak percaya.. bilang tak enak retak ginjal kau.. !!",
+        "available_size": 1,
+        "created_at": null,
+        "updated_at": null,
+        "product_images": [
+            {
+                "id": 5,
+                "product_id": 3,
+                "name": "japanese_ice_coffe,jpg",
+                "created_at": null,
+                "updated_at": null
+            }
+        ],
+        "size_variations": [
+            {
+                "id": 6,
+                "product_id": 3,
+                "size": "Small",
+                "stock": 50,
+                "price": 7000,
+                "created_at": null,
+                "updated_at": null
+            },
+            {
+                "id": 7,
+                "product_id": 3,
+                "size": "Big",
+                "stock": 50,
+                "price": 13000,
+                "created_at": null,
+                "updated_at": null
+            }
+        ]
+    }
 }
 ```
 
