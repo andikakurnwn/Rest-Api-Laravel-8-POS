@@ -302,8 +302,64 @@ example :
 
 ```
 https://api.kodejalanan.com/api/customer/cart
+
 ```
 
+output : 
+```json
+{
+    "status": "Success",
+    "message": "Successfully to load Carts :)",
+    "data": {
+        "0": {
+            "id": 8,
+            "user_id": 2,
+            "name": "Donat",
+            "description": "Donat yang kami miliki ini bukanlah Donat kaleng-kaleng.. silakan coba kalau kau tak percaya.. bilang tak enak retak ginjal kau ..!!",
+            "available_size": 0,
+            "created_at": null,
+            "updated_at": null,
+            "notes": null,
+            "kuantitas": 10,
+            "subtotal": 100000,
+            "product_images": [
+                {
+                    "id": 11,
+                    "product_id": 8,
+                    "name": "donat.jpg",
+                    "created_at": null,
+                    "updated_at": null
+                }
+            ],
+            "product_price": {
+                "id": 2,
+                "product_id": 8,
+                "stock": 35,
+                "price": 10000,
+                "created_at": null,
+                "updated_at": null
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Makanan",
+                    "description": "Ini adalah kategori tentang berbagai produk makanan kami",
+                    "slug": "makanan",
+                    "created_at": null,
+                    "updated_at": null,
+                    "pivot": {
+                        "product_id": 8,
+                        "category_id": 1,
+                        "created_at": null,
+                        "updated_at": null
+                    }
+                }
+            ]
+        },
+        "subtotal": 100000
+    }
+}
+```
 
 ## 7. Request Add Product to Cart of Customer, method POST : 
 
@@ -313,7 +369,7 @@ example :
 
 ```json
 {
-    "product" : "1",
+    "product_id" : "1",
     "notes" : "Size : Small , For : Andika Kurniawan",
     "kuantitas" : "2"   
 }
@@ -354,7 +410,7 @@ example :
 
 ## 10. Request Transaction, method POST :
 
-https://api.kodejalanan.com/api/customer/store
+https://api.kodejalanan.com/api/customer/transaction
 is request required data of cart for make transaction Product of Customer
 example :
 
@@ -370,10 +426,95 @@ example :
             "subtotal" : "50000"
         }
     ],
-
+    
+    "discount" : "10000",
     "subtotal" : "50000"
 
 } 
 
 ```
+## 11. Pending Transaction, method GET :
+
+is request required Authorization token Customer for get Pending Transaction of Customer
+example :
+
+```
+https://api.kodejalanan.com/api/customer/pending-transaction
+```
+
+Output
+```json
+{
+    "status": "Success",
+    "message": "Successfully to load Pending Transactions :)",
+    "data": [
+        {
+            "id": 7,
+            "no_transaction": "INV20201211003",
+            "status": 0,
+            "user_id": 5,
+            "subtotal": 50000,
+            "created_at": "2020-11-12T14:48:03.000000Z",
+            "updated_at": "2020-11-12T14:48:03.000000Z",
+            "transaction_details": [
+                {
+                    "id": 7,
+                    "no_transaction": "INV20201211003",
+                    "product_id": 8,
+                    "notes": null,
+                    "kuantitas": 5,
+                    "discount": 0,
+                    "subtotal": 50000,
+                    "created_at": "2020-11-12T14:48:03.000000Z",
+                    "updated_at": "2020-11-12T14:48:03.000000Z"
+                }
+            ]
+        }
+    ]
+}
+```
+
+Note : if status = 0 it's customer no pay yet but if status = 1 customer pay
+
+## 11. History Transaction, method GET :
+
+is request required Authorization token Customer for get History Transaction of Customer
+example :
+
+```
+https://api.kodejalanan.com/api/customer/history-transaction
+```
+
+Output
+```json
+{
+    "status": "Success",
+    "message": "Successfully to load Transactions :)",
+    "data": [
+        {
+            "id": 7,
+            "no_transaction": "INV20201211003",
+            "status": 1,
+            "user_id": 5,
+            "subtotal": 50000,
+            "created_at": "2020-11-12T14:48:03.000000Z",
+            "updated_at": "2020-11-12T14:48:03.000000Z",
+            "transaction_details": [
+                {
+                    "id": 7,
+                    "no_transaction": "INV20201211003",
+                    "product_id": 8,
+                    "notes": null,
+                    "kuantitas": 5,
+                    "discount": 0,
+                    "subtotal": 50000,
+                    "created_at": "2020-11-12T14:48:03.000000Z",
+                    "updated_at": "2020-11-12T14:48:03.000000Z"
+                }
+            ]
+        }
+    ]
+}
+```
+Note : if status = 0 it's customer no pay yet but if status = 1 customer pay
 
