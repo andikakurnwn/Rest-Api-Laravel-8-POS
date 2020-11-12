@@ -36,7 +36,7 @@ Route::group(['as' => 'customer.', 'prefix' => 'customer', 'namespace' => 'Custo
     Route::get('history-transaction', 'TransactionController@history')->name('transaction.history');
     Route::get('pending-transaction', 'TransactionController@pendingTransaction')->name('transaction.pending');
     Route::post('checkOut', 'TransactionController@checkOut')->name('transaction.checkOut');
-    Route::post('store','TransactionController@store')->name('transaction.store');
+    Route::post('transaction','TransactionController@store')->name('transaction.store');
 
 });
 
