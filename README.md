@@ -78,7 +78,91 @@ output
 }
 ```
 
-## 3. Request List Product, Method GET :
+## 3. Request Profile User, Method GET : 
+
+example : 
+
+is request required token bearer for load data User :
+
+```
+https://api.kodejalanan.com/api/customer/profile
+```
+
+Output : 
+
+```
+{
+    "status": "Success",
+    "message": "Successfully to load User :)",
+    "data": {
+        "id": 6,
+        "role_id": 3,
+        "username": "CSTE202010011233",
+        "image": "default.png",
+        "name": "Taslim",
+        "telephone": null,
+        "email": "taslim.fi@gmail.com",
+        "email_verified_at": null,
+        "address": null,
+        "about": null,
+        "created_at": "2020-10-01T14:24:44.000000Z",
+        "updated_at": "2020-10-01T14:24:44.000000Z",
+        "role": {
+            "id": 3,
+            "name": "Customer",
+            "slug": "customer",
+            "created_at": null,
+            "updated_at": null
+        }
+    }
+}
+```
+
+## 4. Request to Update Profile User, Method PUT : 
+
+is request required token bearer for update Profile :
+
+example : 
+
+```
+https://api.kodejalanan.com/api/customer/profile-update
+```
+
+and Required data :
+
+```json
+{
+
+    "name" : "Andika",
+    "email" : "andikakurnwn@gmail.com",
+    "image" : "blablabla",
+    "telephone" : "081574088369",
+    "address" : "Jalan panjang"
+
+} 
+```
+
+## 5. Request to Update Password User, Method GET :
+
+is request required token bearer for update Password :
+
+example : 
+
+```
+https://api.kodejalanan.com/api/customer/password-update
+```
+
+and Required data :
+
+```json
+{
+    "old_password" : "123456",
+    "password" : "987654",
+    "c_password" : "987654"
+}
+```
+
+## 6. Request List Product, Method GET :
 
 is request don't required anything for get List Product
 example :
@@ -184,7 +268,7 @@ Output
 ```
 
 
-## 4. Request Detail of Product, method GET :
+## 7. Request Detail of Product, method GET :
 
 https://api.kodejalanan.com/api/product/{id_product}
 is request required product_id for load data from detail Product
@@ -241,7 +325,7 @@ Output
 ```
 
 
-## 5. Request List Product by Category, Method GET :
+## 8. Request List Product by Category, Method GET :
 
 https://api.kodejalanan.com/api/category/{slug}
 is request required slug for load data from detail Product
@@ -295,7 +379,7 @@ Output
 ```
 
 
-## 6. Request List Cart of customer, method GET :
+## 9. Request List Cart of customer, method GET :
 
 is request required Authorization token Customer for get List Cart of Customer 
 example :
@@ -361,7 +445,7 @@ output :
 }
 ```
 
-## 7. Request Add Product to Cart of Customer, method POST : 
+## 10. Request Add Product to Cart of Customer, method POST : 
 
 https://api.kodejalanan.com/api/customer/cart
 is request required product_id, notes ( nullable ) and kuantitas for Added Product to Cart 
@@ -375,7 +459,7 @@ example :
 }
 ```
 
-## 8. Request Delete Product from Cart of Customer, method DELETE :
+## 11. Request Delete Product from Cart of Customer, method DELETE :
 
 https://api.kodejalanan.com/api/customer/cart/{cart_id}
 is request required cart_id for deleted Product from Cart of Customer
@@ -386,7 +470,7 @@ https://api.kodejalanan.com/api/customer/cart/1
 ```
 
 
-## 9. Request CheckOut, method POST : 
+## 12. Request CheckOut, method POST : 
 
 https://api.kodejalanan.com/api/customer/checkOut
 is request required data of cart for checkOut Product of Customer
@@ -408,7 +492,7 @@ example :
 }
 ```
 
-## 10. Request Transaction, method POST :
+## 13. Request Transaction, method POST :
 
 https://api.kodejalanan.com/api/customer/transaction
 is request required data of cart for make transaction Product of Customer
@@ -433,7 +517,7 @@ example :
 } 
 
 ```
-## 11. Pending Transaction, method GET :
+## 14. Pending Transaction, method GET :
 
 is request required Authorization token Customer for get Pending Transaction of Customer
 example :
@@ -476,7 +560,7 @@ Output
 
 Note : if status = 0 it's customer no pay yet but if status = 1 customer pay
 
-## 11. History Transaction, method GET :
+## 15. History Transaction, method GET :
 
 is request required Authorization token Customer for get History Transaction of Customer
 example :
