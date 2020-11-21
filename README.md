@@ -118,7 +118,7 @@ Output :
 }
 ```
 
-## 4. Request to Update Profile User, Method PUT : 
+## 4. Request to Update Profile User, Method POST : 
 
 is request required token bearer for update Profile :
 
