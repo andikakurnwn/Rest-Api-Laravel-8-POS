@@ -142,7 +142,7 @@ and Required data :
 } 
 ```
 
-## 5. Request to Update Password User, Method GET :
+## 5. Request to Update Password User, Method PUT :
 
 is request required token bearer for update Password :
 
